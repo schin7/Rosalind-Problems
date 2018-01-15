@@ -1,4 +1,5 @@
 f = open("C:\Users\Owner\Google Drive\Bioinformatics", 'r')
+
 raw_seq = f.readline().rstrip()
 f.close()
 
