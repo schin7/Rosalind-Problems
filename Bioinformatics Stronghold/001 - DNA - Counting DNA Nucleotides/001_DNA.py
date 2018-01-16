@@ -1,9 +1,10 @@
-f = open("C:\Users\Owner\Google Drive\Bioinformatics", 'r')
+with open('C:/Users/Owner/Desktop/rosalind_dna.txt') as input_data:
+	dna = input_data.read()
 
-raw_seq = f.readline().rstrip()
-f.close()
+nuc_count = []
+for nucleotide in ['A', 'C', 'G', 'T']:
+	nuc_count.append(str(dna.count(nucleotide)))
 
-print raw_seq.count("A"),
-print raw_seq.count("C"),
-print raw_seq.count("G"),
-print raw_seq.count("T")
+print ' '.join(nuc_count)
+with open('C:/Users/Owner/Desktop/001_DNA.txt', 'w') as output_data:
+	output_data.write(' '.join(nuc_count))
